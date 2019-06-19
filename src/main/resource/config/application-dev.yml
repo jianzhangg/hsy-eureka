@@ -1,0 +1,17 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: hsy-eureka
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  server:
+    # 主动失效时间
+    eviction-interval-timer-in-ms: 5000
+    # 禁用自我保护
+    enableSelfPreservation: false
+    # 禁用readOnlyCacheMap
+    use-read-only-response-cache: false
